@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<?php
+$est = ' + 10 hour, + 0 minute';
+$est_tes = '10';
+$date=new DateTime();
+
+//date_modify($date,$est);
+
+$tanggal_baru = date_format($date,"H");
+
+echo date_format($date,"Y-m-d H:i:s".PHP_EOL);
+echo '<hr>';
+
+
+if( $tanggal_baru < 8){
+	echo 'Now = '.$tanggal_baru.'<br>if Oke<hr>';
+    echo 'estimation = '.$est_tes.' jam<hr>';
+    
+    if($est_tes > 4 && $est_tes <= 8){
+		echo 'if 2 Oke ';
+    	$est_tes = $est_tes+1;
+        echo 'estimation dalam if = '.$est_tes.'<hr>';
+        echo 'end at = '.($est_tes+8);
+        
+    }else if($est_tes <=4){
+    	echo 'masuk else <= 4<br>';
+        echo 'end at = '.($est_tes+8).'<hr>';
+        
+    }else{
+	echo 'Now = '.$tanggal_baru.'<br>Masuk else awal<br>';
+    $A = ($est_tes/8);
+    $B = round($A);
+    $C = $A-$B;
+    $D = $C*8;
+    
+      if($D > 4){
+         $D = $D+1;
+     	 echo 'A = '.$A.'<br>B = '.$B.'<br>C = '.$C.'<br>D = '.$D.'<hr>';
+      }
+    }
+    
+    echo 'A = '.$A.'<br>B = '.$B.'<br>C = '.$C.'<br>D = '.$D.'<hr>';
+    
+    $Date_new = date_format($date,"d")+$B;
+    echo 'Tanggal Baru = '.$Date_new.' Now = '.$tanggal_baru.' B-1 = '.($B-1).'<hr>';
+    
+    $Hour_new = $D+8;
+    echo 'Jam Baru = '.$Hour_new.' D+8 = '.($D+8).'<hr>';
+    
+    $Minute = date_format($date,"i");
+    echo 'Minute = '.$Minute.'<hr>';
+    
+    echo 'End at = '.date_format($date,"Y-m").'-'.$Date_new.' '.$Hour_new.':'.$Minute.':00<hr>';
+}
+if($tanggal_baru > 17){
+	$end = new DateTime();
+    date_modify($end,'+ 1 day');
+    $hasileee = date_format($end,"Y-m-d H:i:s");
+	echo 'Now = '.$tanggal_baru.'<br>End at = '.$hasileee.'<hr>';
+    
+    if($est_tes > 4 && $est_tes <= 8){
+		echo 'if 2 Oke ';
+    	$est_tes = $est_tes+1;
+        echo 'estimation dalam if = '.$est_tes.'<hr>';
+        echo 'end at = '.($est_tes+8);
+        
+    }else if($est_tes <=4){
+    	echo 'masuk else <= 4<br>';
+        echo 'end at = '.($est_tes+8).'<hr>';
+        
+    }else{
+	echo 'Now = '.$tanggal_baru.'<br>Masuk else awal<br>';
+    $A = ($est_tes/8);
+    $B = round($A);
+    $C = $A-$B;
+    $D = $C*8;
+    
+      if($D > 4){
+         $D = $D+1;
+     	 echo 'A = '.$A.'<br>B = '.$B.'<br>C = '.$C.'<br>D = '.$D.'<hr>';
+      }
+    }
+    
+    echo 'A = '.$A.'<br>B = '.$B.'<br>C = '.$C.'<br>D = '.$D.'<hr>';
+    
+    $Date_new = date_format($date,"d")+$B;
+    echo 'Tanggal Baru = '.$Date_new.' Now = '.$tanggal_baru.' B-1 = '.($B-1).'<hr>';
+    
+    $Hour_new = $D+8;
+    echo 'Jam Baru = '.$Hour_new.' D+8 = '.($D+8).'<hr>';
+    
+    $Minute = date_format($date,"i");
+    echo 'Minute = '.$Minute.'<hr>';
+    
+    echo 'End at = '.date_format($date,"Y-m").'-'.$Date_new.' '.$Hour_new.':'.$Minute.':00<hr>';
+}
+if($tanggal_baru > 8 && $tanggal_baru <=17){
+	$end = new DateTime();
+    date_modify($end,$est);
+    $hasileee = date_format($end,"Y-m-d H:i:s");
+    echo 'Now = '.$tanggal_baru.'<br>Est = '.$est.'<br>End at = '.$hasileee.'<hr>';
+    
+    if($est_tes > 4 && $est_tes <= 8){
+		echo 'if 2 Oke ';
+    	$est_tes = $est_tes+1;
+        echo 'estimation dalam if = '.$est_tes.'<hr>';
+        echo 'end at = '.($est_tes+8);
+        
+    }else if($est_tes <=4){
+    	echo 'masuk else <= 4<br>';
+        echo 'end at = '.($est_tes+8).'<hr>';
+        
+    }else{
+	echo 'Now = '.$tanggal_baru.'<br>Masuk else awal<br>';
+    $A = ($est_tes/8);
+    $B = round($A);
+    $C = $A-$B;
+    $D = $C*8;
+    
+      if($D > 4){
+         $D = $D+1;
+     	 echo 'A = '.$A.'<br>B = '.$B.'<br>C = '.$C.'<br>D = '.$D.'<hr>';
+      }
+    }
+    
+    echo 'A = '.$A.'<br>B = '.$B.'<br>C = '.$C.'<br>D = '.$D.'<hr>';
+    
+    $Date_new = date_format($date,"d")+$B;
+    echo 'Tanggal Baru = '.$Date_new.' Now = '.$tanggal_baru.' B-1 = '.($B-1).'<hr>';
+    
+    $Hour_new = $D+8;
+    echo 'Jam Baru = '.$Hour_new.' D+8 = '.($D+8).'<hr>';
+    
+    $Minute = date_format($date,"i");
+    echo 'Minute = '.$Minute.'<hr>';
+    
+    echo 'End at = '.date_format($date,"Y-m").'-'.$Date_new.' '.$Hour_new.':'.$Minute.':00<hr>';
+}
+?>
+
+</body>
+</html>
+
+<!--
+Pengecekan Deathline
+select where status != done
+select deathline
+-->
